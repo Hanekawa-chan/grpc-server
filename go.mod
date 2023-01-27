@@ -1,4 +1,4 @@
-module grpc_server
+module github.com/kanji-team/grpc-server
 
 go 1.19
 

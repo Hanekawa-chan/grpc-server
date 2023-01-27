@@ -1,7 +1,5 @@
 package grpc_server
 
-import "time"
-
 import (
 	grpcMiddleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	grpcRecovery "github.com/grpc-ecosystem/go-grpc-middleware/recovery"
@@ -9,6 +7,7 @@ import (
 	grpcPrometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/keepalive"
+	"time"
 )
 
 // NewGRPCServer returns grpc server by config with middlewares.
