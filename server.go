@@ -11,7 +11,8 @@ import (
 	"google.golang.org/grpc/keepalive"
 )
 
-// NewGRPCServer returns grpc server by config with middlewares
+// NewGRPCServer returns grpc server by config with middlewares.
+// Has recovery handler, logger, prometheus metrics and request validator
 func NewGRPCServer(cfg *Config, middlewares ...grpc.UnaryServerInterceptor) *grpc.Server {
 	interceptors := []grpc.UnaryServerInterceptor{
 		grpcRecovery.UnaryServerInterceptor(grpcRecovery.WithRecoveryHandlerContext(recoveryHandler)),
