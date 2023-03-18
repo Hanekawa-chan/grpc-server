@@ -1,4 +1,4 @@
-module github.com/shrubberies-team/grpc-server
+module github.com/Hanekawa-chan/grpc-server
 
 go 1.19
 
